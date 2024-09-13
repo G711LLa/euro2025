@@ -1,0 +1,309 @@
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #1a1a1a;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffc107;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#hero .container {
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.hero-content h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.hero-content p {
+    font-size: 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+#about .container,
+#services .container,
+#portfolio .container,
+#resume .container,
+#blog .container,
+#contact .container {
+    text-align: center;
+}
+
+#about .skills {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.skill .circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+#services .services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.service {
+    text-align: center;
+}
+
+.service i {
+    font-size: 50px;
+    color: #ffc107;
+    margin-bottom: 20px;
+}
+
+#portfolio .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#portfolio .gallery-item {
+    width: calc(25% - 20px);
+    overflow: hidden;
+}
+
+#portfolio .gallery-item img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+#portfolio .gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+#resume .resume {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+#resume .experience,
+#resume .education {
+    width: 45%;
+}
+
+#resume .job,
+#resume .school {
+    margin-bottom: 20px;
+}
+
+#resume h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#resume h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#blog .blog-posts {
+    display: flex;
+    justify-content: space-around;
+}
+
+.blog-post {
+    width: 30%;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact form button {
+    padding: 15px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #d4a300;
+}
+
+.footer {
+    background: #1a1a1a;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+.waves {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('http://front-end-noobs.com/jecko/img/waves.png');
+    background-size: 1000px 100px;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 1000px 100px;
+    z-index: 1;
+    opacity: 0.5;
+    animation: animateWaves 4s linear infinite;
+}
+
+#wave1 {
+    background-image: url('http://front-end-noobs.com/jecko/img/wave1.png');
+    z-index: 1000;
+    opacity: 1;
+}
+
+#wave2 {
+    background-image: url('http://front-end-noobs.com/jecko/img/wave2.png');
+    z-index: 999;
+    opacity: 0.5;
+    animation: animateWaves 4s linear infinite;
+}
+
+#wave3 {
+    background-image: url('http://front-end-noobs.com/jecko/img/wave3.png');
+    z-index: 998;
+    opacity: 0.2;
+    animation: animateWaves 3s linear infinite;
+}
+
+#wave4 {
+    background-image: url('http://front-end-noobs.com/jecko/img/wave4.png');
+    z-index: 997;
+    opacity: 0.7;
+    animation: animateWaves 3s linear infinite;
+}
+
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0;
+    }
+}
+
+.social_icon {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.social_icon li {
+    display: inline-block;
+}
+
+.social_icon li a {
+    font-size: 24px;
+    color: white;
+    transition: color 0.5s;
+}
+
+.social_icon li a:hover {
+    color: #ff9800;
+}
+
+.footer p {
+    color: white;
+    margin-top: 20px;
+}
